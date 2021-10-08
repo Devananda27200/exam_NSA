@@ -1,0 +1,83 @@
+1)mkdir sales
+  cd sales
+  ~/sales$ mkdir location1 location2 location3
+  ~/sales$ cd location1
+  ~/sales/location1$ touch sales1 sales2 sales3
+  ~/sales/location1$ cd ..
+  ~/sales$ cd location2
+  ~/sales/location2$ touch pur1 pur2
+  ~/sales/location2$ cd ..
+  ~/sales$ cd location3
+  ~/sales/location3$ touch stock1 stock2
+  ~/sales/location3$ cd ..
+  
+ 1> ~/sales/location2$ cat pur1 pur2 >> pur3
+ 
+ 2> ~/sales$ cp -r  pur3 /home/exam/sales/location3/stock3
+ 
+ 3>~/sales/location3$ chmod a+w stock3
+   ~/sales/location3$ chmod a+r stock3
+   ~/sales/location3$ chmod a+x stock3
+   
+ 4>~/sales/location3$ head -n 10 stock1
+ output
+ -----
+ hi fisat
+external examination
+how are you
+my name is devananda
+studying mca
+ 
+ 5>~/sales$ ls -a
+ output
+ ------
+ .  ..  location1  location2  location3
+-----------------------------------------------------------------------------------
+2)
+echo "enter values to find the volume:"
+read r
+read a
+read h
+
+echo -e "Menu \n 1.Sphere \n 2.Cube \n 3.Cylinder"
+echo "enter your choice!"
+read i
+case $i in
+1) echo "volume of sphere= $(expr 4 / 3 \* 3 \* $r \* $r \* $r)";;
+2) echo "volume of cube= $(expr $a \* $a \* $a)";;
+3) echo "volume of cylinder= $(expr 3 \* $r \* $r \* $h)";;
+esac
+
+output
+-------
+chmod +x volume.sh
+./volume.sh
+
+enter values to find the volume:
+2
+3
+4
+Menu 
+ 1.Sphere 
+ 2.Cube 
+ 3.Cylinder
+enter your choice!
+1
+volume of sphere= 24
+
+Menu 
+ 1.Sphere 
+ 2.Cube 
+ 3.Cylinder
+enter your choice!
+2
+volume of cube= 27
+
+Menu 
+ 1.Sphere 
+ 2.Cube 
+ 3.Cylinder
+enter your choice!
+3
+volume of cylinder= 48
+-------------------------------------------------------------------------------
